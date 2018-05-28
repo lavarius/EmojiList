@@ -10,7 +10,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emojis = ["🙂","☹️", "💩", "🏎", "⛪️"]
+    var emojis = ["🙂","☹️", "💩", "🏎", "⛪️", "💒", "🕌", "🕍"]
     
     //Run this code when this ViewController shows up for the first time
     override func viewDidLoad() {
@@ -60,7 +60,21 @@ class EmojiTableViewController: UITableViewController {
         //print("Tapped!")
         //Do Segue to Car Emoji
         //sender: nil = don't pass anything through
-        performSegue(withIdentifier: "carSegue", sender: nil)
+        
+        //get the tapped emoji from array
+        let tappedEmoji = emojis[indexPath.row]
+        //instead of passing gas tank, we want to pass whatever emoji the User has selected
+        performSegue(withIdentifier: "carSegue", sender: tappedEmoji)
+    }
+    
+    //Call Function that is usually called before a Segue happens
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Get access to next viewcontroller, (as! is an Optional)
+        let emojiRaceCarVC = segue.destination as! RaceCarEmojiDefinition
+        
+        //set emoji variable to "We did it!", changed to sender as! String
+        emojiRaceCarVC.emoji = sender as! String
+        
     }
 
     //---------------- Under HERE, unnneeded -------
