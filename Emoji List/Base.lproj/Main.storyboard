@@ -19,13 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-dM-jyx">
-                                <rect key="frame" x="51" y="114" width="218" height="239"/>
+                                <rect key="frame" x="51" y="84" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A racecar sponsored by Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9Y-Jg-x1p">
                                 <rect key="frame" x="10" y="449" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2013" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54J-xs-tG0">
+                                <rect key="frame" x="99" y="408" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l71-Bw-CtE">
+                                <rect key="frame" x="64" y="367" width="192" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,16 +47,22 @@
                         <constraints>
                             <constraint firstItem="w9Y-Jg-x1p" firstAttribute="leading" secondItem="Tk3-hI-obZ" secondAttribute="leading" constant="10" id="8kY-hG-cZu"/>
                             <constraint firstItem="TdY-dM-jyx" firstAttribute="centerX" secondItem="ni3-9H-UWZ" secondAttribute="centerX" id="GHl-fI-keR"/>
+                            <constraint firstItem="54J-xs-tG0" firstAttribute="top" secondItem="l71-Bw-CtE" secondAttribute="bottom" constant="20" id="L9y-Bw-j7h"/>
                             <constraint firstItem="w9Y-Jg-x1p" firstAttribute="centerX" secondItem="ni3-9H-UWZ" secondAttribute="centerX" id="St0-hb-hJM"/>
+                            <constraint firstItem="l71-Bw-CtE" firstAttribute="centerX" secondItem="ni3-9H-UWZ" secondAttribute="centerX" id="ehj-De-mpI"/>
+                            <constraint firstItem="54J-xs-tG0" firstAttribute="centerX" secondItem="ni3-9H-UWZ" secondAttribute="centerX" id="fdx-M4-PfG"/>
                             <constraint firstItem="Tk3-hI-obZ" firstAttribute="bottom" secondItem="w9Y-Jg-x1p" secondAttribute="bottom" constant="10" id="jud-xs-tNP"/>
+                            <constraint firstItem="w9Y-Jg-x1p" firstAttribute="top" secondItem="54J-xs-tG0" secondAttribute="bottom" constant="20" id="mrJ-u4-TqX"/>
                             <constraint firstItem="Tk3-hI-obZ" firstAttribute="trailing" secondItem="w9Y-Jg-x1p" secondAttribute="trailing" constant="10" id="pdh-Ql-tnQ"/>
-                            <constraint firstItem="TdY-dM-jyx" firstAttribute="top" secondItem="Tk3-hI-obZ" secondAttribute="top" constant="50" id="sCP-NX-ARu"/>
+                            <constraint firstItem="TdY-dM-jyx" firstAttribute="top" secondItem="Tk3-hI-obZ" secondAttribute="top" constant="20" id="prp-3h-v3t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tk3-hI-obZ"/>
                     </view>
                     <connections>
                         <outlet property="EmojiDefLabel" destination="w9Y-Jg-x1p" id="vpJ-Z0-XkY"/>
                         <outlet property="EmojiLabel" destination="TdY-dM-jyx" id="qHw-Iq-s5r"/>
+                        <outlet property="birthLabel" destination="54J-xs-tG0" id="tZr-4P-agw"/>
+                        <outlet property="categoryLabel" destination="l71-Bw-CtE" id="qeB-8W-1gQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8w-zF-5re" userLabel="First Responder" sceneMemberID="firstResponder"/>

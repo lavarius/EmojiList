@@ -13,9 +13,9 @@ class RaceCarEmojiDefinition: UIViewController {
     @IBOutlet weak var EmojiDefLabel: UILabel!
     @IBOutlet weak var EmojiLabel: UILabel!
     //@IBOutlet weak var RCEmojiLabel: UILabel!
-    
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
     var emoji = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,18 +26,32 @@ class RaceCarEmojiDefinition: UIViewController {
         //since we don't have the whole array passed in, we don't know what's there and can't use a for loop
         if emoji == "🙂" {
             EmojiDefLabel.text = "This is the smiley emoji"
+            birthLabel.text = "Birth Year 1900"
+            categoryLabel.text = "Category: Faces"
         } else if emoji == "☹️" {
             EmojiDefLabel.text = "This is the sad face emoji"
+            birthLabel.text = "Birth Year: 1900"
+            categoryLabel.text = "Category: Faces"
         } else if emoji == "💩" {
             EmojiDefLabel.text = "This is the poop emoji"
+            birthLabel.text = "Birth Year: 2000"
+            categoryLabel.text = "Category: Faces"
         } else if emoji == "⛪️" {
             EmojiDefLabel.text = "This is the Church emoji"
+            birthLabel.text = "Birth Year: 20"
+            categoryLabel.text = "Category: Buildings"
         } else if emoji == "💒" {
             EmojiDefLabel.text = "This is the Love Church emoji"
+            birthLabel.text = "Birth Year: 2010"
+            categoryLabel.text = "Category: Buildings"
         } else if emoji == "🕌" {
             EmojiDefLabel.text = "This is the Pagoda emoji"
+            birthLabel.text = "Birth Year: 1964"
+            categoryLabel.text = "Category: Buildings"
         } else if emoji == "🕍" {
             EmojiDefLabel.text = "This is David's Church emoji"
+            birthLabel.text = "Birth Year: 1666"
+            categoryLabel.text = "Category: Buildings"
         } else {
             EmojiDefLabel.text = EmojiDefLabel.text
         }
