@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F030F1E20BC7B1300DB6081 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F030F1D20BC7B1300DB6081 /* EmojiTableViewController.swift */; };
 		5F030F2220BC929B00DB6081 /* RaceCarEmojiDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F030F2120BC929B00DB6081 /* RaceCarEmojiDefinition.swift */; };
+		5F030F2420BCB64C00DB6081 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F030F2320BCB64C00DB6081 /* Emoji.swift */; };
 		5FCD27EF1FBD787300860F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD27EE1FBD787300860F0D /* AppDelegate.swift */; };
 		5FCD27F41FBD787300860F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD27F21FBD787300860F0D /* Main.storyboard */; };
 		5FCD27F61FBD787300860F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD27F51FBD787300860F0D /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		5F030F1D20BC7B1300DB6081 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 		5F030F2120BC929B00DB6081 /* RaceCarEmojiDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCarEmojiDefinition.swift; sourceTree = "<group>"; };
+		5F030F2320BCB64C00DB6081 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		5FCD27EB1FBD787300860F0D /* Emoji List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCD27EE1FBD787300860F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FCD27F31FBD787300860F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5FCD27EE1FBD787300860F0D /* AppDelegate.swift */,
 				5F030F1D20BC7B1300DB6081 /* EmojiTableViewController.swift */,
 				5F030F2120BC929B00DB6081 /* RaceCarEmojiDefinition.swift */,
+				5F030F2320BCB64C00DB6081 /* Emoji.swift */,
 				5FCD27F21FBD787300860F0D /* Main.storyboard */,
 				5FCD27F51FBD787300860F0D /* Assets.xcassets */,
 				5FCD27F71FBD787300860F0D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				5F030F1E20BC7B1300DB6081 /* EmojiTableViewController.swift in Sources */,
 				5F030F2220BC929B00DB6081 /* RaceCarEmojiDefinition.swift in Sources */,
+				5F030F2420BCB64C00DB6081 /* Emoji.swift in Sources */,
 				5FCD27EF1FBD787300860F0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

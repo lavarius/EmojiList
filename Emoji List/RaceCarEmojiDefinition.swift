@@ -15,46 +15,18 @@ class RaceCarEmojiDefinition: UIViewController {
     //@IBOutlet weak var RCEmojiLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var birthLabel: UILabel!
-    var emoji = ""
+    var emoji = Emoji()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //The attribues of this View Controller's label is saved and the clicked emoji in the array is reset with the attributes by passing the array content into this VC's emoji variable and setting it to the RCEmojiLabel's text. 
-        EmojiLabel.text = emoji
+        //take the emoji label and assign the class' emoji
+        EmojiLabel.text = emoji.theEmoji
+        EmojiDefLabel.text = emoji.def
+        birthLabel.text = "Release Date: \(emoji.releaseDate)"
+        categoryLabel.text = "Category: \(emoji.category)"
+        // Notice: only need four lines of codes, this conmes with the flexibility of adding a populated list!
         
-        //["🙂","☹️", "💩", "🏎", "⛪️", "💒", "🕌", "🕍"]
-        //since we don't have the whole array passed in, we don't know what's there and can't use a for loop
-        if emoji == "🙂" {
-            EmojiDefLabel.text = "This is the smiley emoji"
-            birthLabel.text = "Birth Year 1900"
-            categoryLabel.text = "Category: Faces"
-        } else if emoji == "☹️" {
-            EmojiDefLabel.text = "This is the sad face emoji"
-            birthLabel.text = "Birth Year: 1900"
-            categoryLabel.text = "Category: Faces"
-        } else if emoji == "💩" {
-            EmojiDefLabel.text = "This is the poop emoji"
-            birthLabel.text = "Birth Year: 2000"
-            categoryLabel.text = "Category: Faces"
-        } else if emoji == "⛪️" {
-            EmojiDefLabel.text = "This is the Church emoji"
-            birthLabel.text = "Birth Year: 20"
-            categoryLabel.text = "Category: Buildings"
-        } else if emoji == "💒" {
-            EmojiDefLabel.text = "This is the Love Church emoji"
-            birthLabel.text = "Birth Year: 2010"
-            categoryLabel.text = "Category: Buildings"
-        } else if emoji == "🕌" {
-            EmojiDefLabel.text = "This is the Pagoda emoji"
-            birthLabel.text = "Birth Year: 1964"
-            categoryLabel.text = "Category: Buildings"
-        } else if emoji == "🕍" {
-            EmojiDefLabel.text = "This is David's Church emoji"
-            birthLabel.text = "Birth Year: 1666"
-            categoryLabel.text = "Category: Buildings"
-        } else {
-            EmojiDefLabel.text = EmojiDefLabel.text
-        }
+        //The attribues of this View Controller's label is saved and the clicked emoji in the array is reset with the attributes by passing the array content into this VC's emoji variable and setting it to the RCEmojiLabel's text.
     }
 
 }

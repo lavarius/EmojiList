@@ -10,12 +10,16 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emojis = ["🙂","☹️", "💩", "🏎", "⛪️", "💒", "🕌", "🕍"]
+    //var emojis = ["🙂","☹️", "💩", "🏎", "⛪️", "💒", "🕌", "🕍"]
+    var emojis : [Emoji] = [] //create var or property containing an array of objects
     
     //Run this code when this ViewController shows up for the first time
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // executes as app runs, calls when view controller is called up
+        emojis = createEmojis()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,8 +50,16 @@ class EmojiTableViewController: UITableViewController {
     //What should go inside of each of these Rows in this tableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        //new variable emojiList
+        let emojiList = emojis[indexPath.row]
+        
         //From the storyboard, we changed the attribute identifier of "reuseIdentifier" to "myCell" to connect the code and storyboard
-        cell.textLabel?.text = emojis[indexPath.row]
+        //cell.textLabel?.text = emojis[indexPath.row].category
+        
+        cell.textLabel?.text = "\(emojiList.theEmoji) - \(emojiList.category)"
+        //notice how everything is inside this one object, no need for if statements to categorize. you can provide information for each object
+        
         
         //print(indexPath.row)
         // Configure the cell...
@@ -73,8 +85,26 @@ class EmojiTableViewController: UITableViewController {
         let emojiRaceCarVC = segue.destination as! RaceCarEmojiDefinition
         
         //set emoji variable to "We did it!", changed to sender as! String
-        emojiRaceCarVC.emoji = sender as! String
+        //emojiRaceCarVC.emoji = sender as! String
+        // Changed from String to Object
+        emojiRaceCarVC.emoji = sender as! Emoji
+    }
+    
+    // Return array of Emoji objects
+    func createEmojis() -> [Emoji] {
+        //First create one of the emojis
+        let smiley = Emoji() //Emoji object, smiley
+        smiley.theEmoji = "🙂"
+        smiley.def = "A happy smiling face"
+        smiley.releaseDate = 2010
+        smiley.category = "Faces"
         
+        let avocado = Emoji()
+        avocado.theEmoji = "🥑"
+        avocado.def = "A nice green avocado"
+        avocado.releaseDate = 2017
+        avocado.category = "Food"
+        return [smiley, avocado]
     }
 
     //---------------- Under HERE, unnneeded -------
